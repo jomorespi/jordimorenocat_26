@@ -1,23 +1,7 @@
 :root {
   /* Set sans-serif & mono fonts */
-  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+  --font-sans: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
     "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
     "Helvetica Neue", sans-serif;
-  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  --standard-border-radius: 5px;
-  --border-width: 1px;
-
-  /* Default (light) theme */
-  --bg: #f8f9fa;
-  --accent-bg: #fff;
-  --text: #4A3C51;
-  --text-light: #585858;
-  --border: #898EA4;
-  --accent: #0DDDAF;
-  --accent-hover: #0DDDAF;
-  --accent-text: var(--bg);
-  --code: #d81b60;
-  --preformatted: #444;
-  --marked: #ffdd33;
-  --disabled: #efefef;
+  --font-mono: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
