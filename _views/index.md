@@ -1,6 +1,6 @@
 ---
 title: Hola, sóc en Jordi Moreno
-layout: layout.html
+layout: layout.njk
 ---
 
 ## Em dedico al desenvolupament web

@@ -1,5 +1,7 @@
 module.exports.config = {
   dir: {
-    input: "_views"
+    input: "_views",
+    includes: "_includes",
+    layouts: "_layouts",
   }
 };
