@@ -9,9 +9,7 @@ title: Enllaços
 <ul>
     {%- for link in collections.projects -%}
         <li>
-            <h4><a href="{{ link.data.url }}" target="_blank">{{ link.data.title }}</a></h4>
-            {%- if link.data.subt -%} <p>{{ link.data.subt }}</p> {%- endif -%}
-            {{ link.content }}
+            {% include 'link-item.njk' %}
         </li>
     {%- endfor -%}
 </ul>
@@ -20,9 +18,7 @@ title: Enllaços
 <ul>
     {%- for link in collections.code -%}
         <li>
-            <h4><a href="{{ link.data.url }}" target="_blank">{{ link.data.title }}</a></h4>
-            {%- if link.data.subt -%} <p>{{ link.data.subt }}</p> {%- endif -%}
-            {{ link.content }}
+            {% include 'link-item.njk' %}
         </li>
     {%- endfor -%}
 </ul>
@@ -31,9 +27,7 @@ title: Enllaços
 <ul>
     {%- for link in collections.books -%}
         <li>
-            <h4><a href="{{ link.data.url }}" target="_blank">{{ link.data.title }}</a></h4>
-            {%- if link.data.subt -%} <p>{{ link.data.subt }}</p> {%- endif -%}
-            {{ link.content }}
+            {% include 'link-item.njk' %}
         </li>
     {%- endfor -%}
 </ul>
@@ -42,9 +36,7 @@ title: Enllaços
 <ul>
     {%- for link in collections.social -%}
         <li>
-            <h4><a href="{{ link.data.url }}" target="_blank">{{ link.data.title }}</a></h4>
-            {%- if link.data.subt -%} <p>{{ link.data.subt }}</p> {%- endif -%}
-            {{ link.content }}
+            {% include 'link-item.njk' %}
         </li>
     {%- endfor -%}
 </ul>
@@ -53,9 +45,7 @@ title: Enllaços
 <ul>
     {%- for link in collections.contact -%}
         <li>
-            <h4><a href="{{ link.data.url }}" target="_blank">{{ link.data.title }}</a></h4>
-            {%- if link.data.subt -%} <p>{{ link.data.subt }}</p> {%- endif -%}
-            {{ link.content }}
+            {% include 'link-item.njk' %}
         </li>
     {%- endfor -%}
 </ul>
