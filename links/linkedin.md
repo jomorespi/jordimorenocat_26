@@ -1,6 +1,6 @@
 ---
-title: "Linkedin"
-subt: "/in/jomorespi"
-category: "social"
-link: "https://www.linkedin.com/in/jomorespi/?locale=xx_XX"
+title: Linkedin
+subt: /in/jomorespi
+tags: social
+url: https://www.linkedin.com/in/jomorespi/?locale=xx_XX
 ---

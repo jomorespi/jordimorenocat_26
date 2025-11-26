@@ -1,6 +1,6 @@
 ---
 title: "Com Assolir Recursos Accessibles"
-date: 2025-02-06T08:19:46+01:00
+date: 2025-02-06
 draft: false
 ---
 

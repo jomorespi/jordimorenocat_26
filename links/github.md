@@ -1,6 +1,6 @@
 ---
-title: "Github"
-subt: "github.com/jomorespi"
-category: "code"
-link: "https://github.com/jomorespi"
+title: Github
+subt: github.com/jomorespi
+tags: code
+url: https://github.com/jomorespi
 ---

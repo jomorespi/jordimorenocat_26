@@ -1,6 +1,6 @@
 ---
-title: "Codeberg"
-subt: "codeberg.org/jomorespi"
-category: "code"
-link: "https://codeberg.org/jomorespi"
+title: Codeberg
+subt: codeberg.org/jomorespi
+tags: code
+url: https://codeberg.org/jomorespi
 ---

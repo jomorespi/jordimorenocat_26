@@ -1,6 +1,6 @@
 ---
-title: "Correu electrònic"
-subt: "hola@jordimoreno.cat"
-category: "code"
-link: "mailto:hola@jordimoreno.cat"
+title: Correu electrònic
+subt: hola@jordimoreno.cat
+tags: contact
+url: mailto:hola@jordimoreno.cat
 ---

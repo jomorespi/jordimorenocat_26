@@ -1,6 +1,6 @@
 ---
 title: "Necessito un blog?"
-date: 2022-12-03T12:05:16+01:00
+date: 2022-12-03
 draft: false
 ---
 

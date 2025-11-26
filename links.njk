@@ -1,0 +1,61 @@
+---
+layout: layout.html
+title: Enllaços
+---
+
+<h2>Enllaços</h2>
+
+<h3>Projectes</h3>
+<ul>
+    {%- for link in collections.projects -%}
+        <li>
+            <h4><a href="{{ link.data.url }}" target="_blank">{{ link.data.title }}</a></h4>
+            {%- if link.data.subt -%} <p>{{ link.data.subt }}</p> {%- endif -%}
+            {{ link.content }}
+        </li>
+    {%- endfor -%}
+</ul>
+
+<h3>Experiments</h3>
+<ul>
+    {%- for link in collections.code -%}
+        <li>
+            <h4><a href="{{ link.data.url }}" target="_blank">{{ link.data.title }}</a></h4>
+            {%- if link.data.subt -%} <p>{{ link.data.subt }}</p> {%- endif -%}
+            {{ link.content }}
+        </li>
+    {%- endfor -%}
+</ul>
+
+<h3>Publicacions</h3>
+<ul>
+    {%- for link in collections.books -%}
+        <li>
+            <h4><a href="{{ link.data.url }}" target="_blank">{{ link.data.title }}</a></h4>
+            {%- if link.data.subt -%} <p>{{ link.data.subt }}</p> {%- endif -%}
+            {{ link.content }}
+        </li>
+    {%- endfor -%}
+</ul>
+
+<h3>Social</h3>
+<ul>
+    {%- for link in collections.social -%}
+        <li>
+            <h4><a href="{{ link.data.url }}" target="_blank">{{ link.data.title }}</a></h4>
+            {%- if link.data.subt -%} <p>{{ link.data.subt }}</p> {%- endif -%}
+            {{ link.content }}
+        </li>
+    {%- endfor -%}
+</ul>
+
+<h3>Contacte</h3>
+<ul>
+    {%- for link in collections.contact -%}
+        <li>
+            <h4><a href="{{ link.data.url }}" target="_blank">{{ link.data.title }}</a></h4>
+            {%- if link.data.subt -%} <p>{{ link.data.subt }}</p> {%- endif -%}
+            {{ link.content }}
+        </li>
+    {%- endfor -%}
+</ul>
