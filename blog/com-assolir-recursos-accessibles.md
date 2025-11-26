@@ -1,3 +1,9 @@
+---
+title: "Com Assolir Recursos Accessibles"
+date: 2025-02-06T08:19:46+01:00
+draft: false
+---
+
 Devia ser l’any passat, que em van recomanar una pel·lícula amb aquestes paraules: «De les que t’agraden a tu: pur diàleg». Es tractava d'una producció catalana. Quan vaig tenir una estona lliure, vaig córrer a buscar-la a la plataforma digital en qüestió. Al cap de cinc minuts ho vaig haver de deixar córrer. Com que sordejo, em costava seguir els famosos diàlegs. Sempre activo els subtítols, sí, per descomptat. Però en aquest cas no funcionaven.
 
 Avui he vist que la mateixa pel·lícula ara també es pot trobar en una altra plataforma. M’he disposat a tornar a intentar-ho, confiant en la bona predisposició que aquesta altra plataforma m'ha demostrat amb el tema dels subtítols. Doncs nanai. Ni tan sols m’hi apareixia el botó d’activar-los. Fes-te fotre.
