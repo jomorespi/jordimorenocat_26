@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "minify": "minify dist/assets/css/style.css > dist/assets/css/style.min.css",
     "watch": "npx @11ty/eleventy --serve --quiet",
     "build": "npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +15,9 @@
   "type": "commonjs",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2"
+  },
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "terser": "^5.44.1"
   }
 }

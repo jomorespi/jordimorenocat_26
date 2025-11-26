@@ -1,4 +1,8 @@
 ---
 permalink: assets/js/app.css
 ---
+
+{% set js %}
 {% include "./assets/js/custom.js" %}
+{% endset %}
+{{ js | jsmin | safe }}

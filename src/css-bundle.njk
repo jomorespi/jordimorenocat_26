@@ -1,8 +1,12 @@
 ---
 permalink: assets/css/style.css
 ---
+
+{% set css %}
 {% include "./assets/css/reset.css" %}
 {% include "./assets/css/fonts.css" %}
 {% include "./assets/css/variables.css" %}
 {% include "./assets/css/base.css" %}
 {% include "./assets/css/custom.css" %}
+{% endset %}
+{{ css | cssmin | safe }}
