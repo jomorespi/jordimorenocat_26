@@ -1,6 +1,6 @@
 ---
 title: Codepen
 subt: codepen.io/jomorespi
-tags: code
+tags: social
 url: https://codepen.io/jomorespi
 ---

@@ -1,6 +1,6 @@
 ---
 title: Codeberg
 subt: codeberg.org/jomorespi
-tags: code
+tags: social
 url: https://codeberg.org/jomorespi
 ---

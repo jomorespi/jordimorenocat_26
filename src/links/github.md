@@ -1,6 +1,6 @@
 ---
 title: Github
 subt: github.com/jomorespi
-tags: code
+tags: social
 url: https://github.com/jomorespi
 ---
