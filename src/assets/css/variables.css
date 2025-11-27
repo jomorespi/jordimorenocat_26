@@ -1,18 +1,16 @@
 :root {
-  --font-sans: Manrope, -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
-    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
-    "Helvetica Neue", sans-serif;
-  --font-serif: LibreBaskerville, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --font-sans: Lexend, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-serif: SourceSerif4, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-mono: Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
 
-  --font-base: clamp(14px, 1.5vw + 1rem, 16px);
+  --font-base: clamp(16px, 1.5vw + 1rem, 18px);
   --font-lg: clamp(1rem, 1.2vw + 0.5rem, 1.25rem);
   --font-sm: clamp(0.75rem, 0.8vw + 0.25rem, 0.875rem);
   --font-xl: clamp(1rem, 1.8vw + 0.5rem, 1.5rem);
   --font-2xl: clamp(1.5rem, 2.5vw + 0.5rem, 2rem);
   --font-3xl: clamp(2rem, 3vw + 0.5rem, 2.5rem);
 
-  --color-body: #111111;
-  --color-bg: #ffffff;
-  --color-primary: #0ddeb0;
+  --color-body: #4A3C51;
+  --color-bg: #f8f9fa;
+  --color-primary: #0DDDAF;
 }

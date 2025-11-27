@@ -1,5 +1,10 @@
 :root {
     font-size: var(--font-base, 16px);
+    
+    ::selection {
+        background-color: var(--color-primary, #0ddeb0);
+        color: var(--color-body, #111);
+    }
 }
 
 body {
@@ -8,10 +13,6 @@ body {
     background-color: var(--color-bg, #fff);
     line-height: 1.6;
 
-    ::selection {
-        background-color: var(--color-primary, #0ddeb0);
-        color: var(--color-body, #111);
-    }
 }
 
 .container {
