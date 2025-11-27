@@ -1,11 +1,11 @@
 :root {
-  --font-sans: Karla, -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+  --font-sans: Manrope, -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
     "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
     "Helvetica Neue", sans-serif;
-  --font-serif: Vollkorn, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-serif: LibreBaskerville, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
-  --font-base: clamp(16px, 1.5vw + 1rem, 18px);
+  --font-base: clamp(14px, 1.5vw + 1rem, 16px);
   --font-lg: clamp(1rem, 1.2vw + 0.5rem, 1.25rem);
   --font-sm: clamp(0.75rem, 0.8vw + 0.25rem, 0.875rem);
   --font-xl: clamp(1rem, 1.8vw + 0.5rem, 1.5rem);

@@ -1,11 +1,12 @@
 :root {
-    font-size: var(--font-base, 18px);
+    font-size: var(--font-base, 16px);
 }
 
 body {
     font-family: var(--font-sans);
     color: var(--color-body, #111);
     background-color: var(--color-bg, #fff);
+    line-height: 1.6;
 
     ::selection {
         background-color: var(--color-primary, #0ddeb0);
@@ -42,7 +43,6 @@ h3 {
 p {
     font-size: var(--font-base, 18px);
     margin-bottom: 1.5rem;
-    line-height: 1.6;
 }
 
 a {
