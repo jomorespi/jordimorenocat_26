@@ -42,5 +42,7 @@ p {
 
 a {
     color: inherit;
-    text-decoration: underline;
+    text-decoration: underline wavy var(--color-primary);
+    text-underline-offset: 7px;
+    /* font-weight: 500; */
 }
