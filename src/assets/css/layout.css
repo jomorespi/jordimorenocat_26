@@ -1,0 +1,39 @@
+.container {
+    width: calc(100% - 2.5rem);
+    max-width: 710px;
+    margin-inline: auto;
+}
+
+.header {
+    margin: 0 auto 2rem;
+    background-color: var(--color-primary);
+    padding-block: 1rem;
+    border-radius: 0 0 50% 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-size: var(--font-sm);
+}
+
+.header a {
+    color: var(--color-primary);
+    background-color: var(--color-body);
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 0.25rem;
+    padding-inline: .25rem;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.header__nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
