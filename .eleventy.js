@@ -1,5 +1,6 @@
 const CleanCSS = require("clean-css");
 const Terser = require("terser");
+const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
 
@@ -10,7 +11,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("src/assets/css");
   eleventyConfig.addWatchTarget("src/assets/js");
 
-  // Filters
+  // Minify
   eleventyConfig.addFilter("cssmin", code =>
     new CleanCSS({}).minify(code).styles
   );
@@ -18,6 +19,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("jsmin", code => {
     const minified = Terser.minify(code);
     return minified.error ? code : minified.code;
+  });
+
+  // Dates
+  eleventyConfig.addFilter("formatDate", dateObj => {
+    return DateTime.fromJSDate(dateObj).toFormat("dd / MM / yyyy");
   });
 
   // Options

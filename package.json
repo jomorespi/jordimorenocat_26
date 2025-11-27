@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "clean-css": "^5.3.3",
+    "luxon": "^3.7.2",
     "terser": "^5.44.1"
   }
 }
