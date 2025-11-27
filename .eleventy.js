@@ -2,8 +2,14 @@ const CleanCSS = require("clean-css");
 const Terser = require("terser");
 const { DateTime } = require("luxon");
 const markdownIt = require('markdown-it');
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 
 const md = new markdownIt();
+
+require('dotenv').config({
+    path: process.env.NODE_ENV === 'prod' ? '.env.prod' : '.env.dev'
+});
 
 module.exports = function(eleventyConfig) {
 
@@ -33,6 +39,29 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('markdown', (content) => {
     return md.render(content);
   });
+
+  // Navigation
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+  // RSS
+  eleventyConfig.addPlugin(feedPlugin, {
+		type: "atom", // or "rss", "json"
+		outputPath: "/feed.xml",
+		collection: {
+			name: "blog",
+			limit: 0, // 0 means no limit
+		},
+		metadata: {
+			language: "ca",
+			title: "jordimoreno.cat",
+			subtitle: "Blog de Jordi Moreno Crespi, desenvolupador web i escriptor.",
+			base: process.env.URL || "https://jordimoreno.cat",
+			author: {
+				name: "Jordi Moreno Crespi",
+				email: "hola@jordimoreno.cat", // Optional
+			}
+		}
+	});
 
   // Options
   return {
