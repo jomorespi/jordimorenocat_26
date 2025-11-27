@@ -1,0 +1,59 @@
+{
+    "projects": {
+        "title": "Projectes",
+        "items": [
+            {
+                "title": "Tres vuits",
+                "subt": "tresvuits.jordimoreno.cat",
+                "url": "https://tresvuits.jordimoreno.cat",
+                "desc": "*Tres Vuits* és un dietari on escric al voltant de la meva relació amb un problema d'hipoacúsia bilateral que m'ha acompanyat des de l'adolescència."
+            }
+        ]
+    },
+    "books": {
+        "title": "Publicacions",
+        "items": [
+            {
+                "title": "La Llegenda del Falatell",
+                "subt": "Carnaval de Terra Endins",
+                "url": "https://www.carnavaltorello.cat/la-llegenda-del-falatell/",
+                "desc": "*La llegenda del Falatell* (2020) va ser una proposta d'ACTE (a partir d'una idea de Jordi Dorca Alba) per integrar l'imaginari del carnaval de Torelló dins d'un relat destinat a públic infantil-juvenil. Il·lustrat per Blai Marginedas."
+            }
+        ]
+    },
+    "social": {
+        "title": "Perfils",
+        "items": [
+            {
+                "title": "Linkedin",
+                "subt": "/in/jomorespi",
+                "url": "https://www.linkedin.com/in/jomorespi/?locale=xx_XX"
+            },
+            {
+                "title": "Github",
+                "subt": "github.com/jomorespi",
+                "url": "https://github.com/jomorespi"
+            },
+            {
+                "title": "Mastodon",
+                "subt": "@jomorespi@xarxa.cloud",
+                "url": "https://xarxa.cloud/@jomorespi"
+            },
+            {
+                "title": "Codepen",
+                "subt": "codepen.io/jomorespi",
+                "url": "https://codepen.io/jomorespi"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contacte",
+        "items": [
+            {
+                "title": "Correu electrònic",
+                "subt": "hola@jordimoreno.cat",
+                "url": "mailto:hola@jordimoreno.cat"
+            }
+        ]
+    }
+}

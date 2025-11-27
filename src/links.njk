@@ -3,38 +3,16 @@ layout: layout.njk
 title: Enllaços
 ---
 
-<h2>Projectes</h2>
-<ul>
-    {%- for link in collections.projects | sort(attribute="data.order") -%}
-        <li>
-            {% include 'link-item.njk' %}
-        </li>
+{% for section, data in links %}
+  <h2>{{ data.title }}</h2>
+  <ul>
+    {%- for link in data.items -%}
+      <li>
+        <a href="{{ link.url }}" target="_blank">{{ link.title }}</a> {% if link.subt %}&lpar;{{ link.subt }}&rpar;{% endif %}
+        {% if link.desc %}
+          <p>{{ link.desc | markdown | safe }}</p>
+        {% endif %}
+      </li>
     {%- endfor -%}
-</ul>
-
-<h2>Publicacions</h2>
-<ul>
-    {%- for link in collections.books | sort(attribute="data.order") -%}
-        <li>
-            {% include 'link-item.njk' %}
-        </li>
-    {%- endfor -%}
-</ul>
-
-<h2>Perfils</h2>
-<ul>
-    {%- for link in collections.social | sort(attribute="data.order") -%}
-        <li>
-            {% include 'link-item.njk' %}
-        </li>
-    {%- endfor -%}
-</ul>
-
-<h2>Contacte</h2>
-<ul>
-    {%- for link in collections.contact | sort(attribute="data.order") -%}
-        <li>
-            {% include 'link-item.njk' %}
-        </li>
-    {%- endfor -%}
-</ul>
+  </ul>
+{% endfor %}

@@ -1,6 +1,9 @@
 const CleanCSS = require("clean-css");
 const Terser = require("terser");
 const { DateTime } = require("luxon");
+const markdownIt = require('markdown-it');
+
+const md = new markdownIt();
 
 module.exports = function(eleventyConfig) {
 
@@ -24,6 +27,11 @@ module.exports = function(eleventyConfig) {
   // Dates
   eleventyConfig.addFilter("formatDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("dd / MM / yyyy");
+  });
+
+  // Json markdown format
+  eleventyConfig.addFilter('markdown', (content) => {
+    return md.render(content);
   });
 
   // Options
