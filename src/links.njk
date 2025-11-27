@@ -5,7 +5,7 @@ title: Enllaços
 
 <h2>Projectes</h2>
 <ul>
-    {%- for link in collections.projects -%}
+    {%- for link in collections.projects | sort(attribute="data.order") -%}
         <li>
             {% include 'link-item.njk' %}
         </li>
@@ -14,7 +14,7 @@ title: Enllaços
 
 <h2>Publicacions</h2>
 <ul>
-    {%- for link in collections.books -%}
+    {%- for link in collections.books | sort(attribute="data.order") -%}
         <li>
             {% include 'link-item.njk' %}
         </li>
@@ -23,7 +23,7 @@ title: Enllaços
 
 <h2>Perfils</h2>
 <ul>
-    {%- for link in collections.social -%}
+    {%- for link in collections.social | sort(attribute="data.order") -%}
         <li>
             {% include 'link-item.njk' %}
         </li>
@@ -32,7 +32,7 @@ title: Enllaços
 
 <h2>Contacte</h2>
 <ul>
-    {%- for link in collections.contact -%}
+    {%- for link in collections.contact | sort(attribute="data.order") -%}
         <li>
             {% include 'link-item.njk' %}
         </li>
