@@ -1,3 +1,3 @@
 ## jordimoreno.cat
 
-Portal personal/professional desenvolupat amb l'ajuda d'[Eleventy](https://www.11ty.dev/).
+Portal personal/professional desenvolupat amb l'ajuda d'[Eleventy](https://www.11ty.dev/), amb [Nunjucks](https://mozilla.github.io/nunjucks/) com a motor de plantilles i [Markdown](https://www.markdownguide.org/) pel contingut.
