@@ -1,30 +1,30 @@
 @font-face {
-    font-family: 'Lexend';
-    src: url('/assets/fonts/Lexend.ttf') format('truetype-variations');
+    font-family: 'Manrope';
+    src: url('/assets/fonts/Manrope.ttf') format('truetype-variations');
     font-weight: 400 600;
     font-style: normal;
     font-display: swap;
 }
 
 /* @font-face {
-    font-family: 'Lexend';
-    src: url('/assets/fonts/Lexend-Italic.ttf') format('truetype-variations');
+    font-family: 'Manrope';
+    src: url('/assets/fonts/Manrope-Italic.ttf') format('truetype-variations');
     font-weight: 400 600;
     font-style: italic;
     font-display: swap;
 } */
 
 @font-face {
-    font-family: 'SourceSerif4';
-    src: url('/assets/fonts/SourceSerif4.ttf') format('truetype-variations');
+    font-family: 'Gambetta';
+    src: url('/assets/fonts/Gambetta.ttf') format('truetype-variations');
     font-weight: 400 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'SourceSerif4';
-    src: url('/assets/fonts/SourceSerif4-Italic.ttf') format('truetype-variations');
+    font-family: 'Gambetta';
+    src: url('/assets/fonts/Gambetta-Italic.ttf') format('truetype-variations');
     font-weight: 400 600;
     font-style: italic;
     font-display: swap;

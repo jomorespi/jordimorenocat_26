@@ -1,23 +1,23 @@
 .container {
     width: calc(100% - 2.5rem);
-    max-width: 710px;
+    max-width: 65ch;
     margin-inline: auto;
 }
 
 .header {
     margin: 0 auto 2rem;
-    background-color: var(--color-primary);
+    /* background-color: var(--color-bg); */
+    backdrop-filter: blur(5px);
     padding-block: 1rem;
     border-radius: 0 0 50% 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    font-size: var(--font-sm);
 }
 
-.header a {
-    color: var(--color-primary);
-    background-color: var(--color-body);
+a {
+    color: var(--color-body);
+    background-color: var(--color-primary);
     text-decoration: none;
     display: inline-block;
     border-radius: 0.25rem;

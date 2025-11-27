@@ -1,7 +1,7 @@
 ---
-title: Hola, sóc en Jordi Moreno
+title: Faig textos explícits i webs accessibles
 layout: layout.njk
+eleventyNavigation:
+    key: jordimoreno.cat
+    order: 1
 ---
-
-## Em dedico al desenvolupament web
-Vaig arribar a aquest ofici per curiositat i m'hi vaig quedar per

@@ -1,9 +1,5 @@
 <header class="header">
     <nav class="container header__nav">
-        <a href="{{ site.url }}">
-            {{ site.title }}
-        </a>
-
         {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
     </nav>
 </header>
