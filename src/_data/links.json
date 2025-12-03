@@ -27,27 +27,32 @@
             {
                 "title": "Linkedin",
                 "subt": "/in/jomorespi",
-                "url": "https://www.linkedin.com/in/jomorespi/?locale=xx_XX"
+                "url": "https://www.linkedin.com/in/jomorespi/?locale=xx_XX",
+                "desc": "Perfil professional, currículum i algunes publicacions sobre desenvolupament web i accessibilitat."
             },
             {
                 "title": "Github",
                 "subt": "github.com/jomorespi",
-                "url": "https://github.com/jomorespi"
-            },
-            {
-                "title": "Mastodon",
-                "subt": "@jomorespi@xarxa.cloud",
-                "url": "https://xarxa.cloud/@jomorespi"
+                "url": "https://github.com/jomorespi",
+                "desc": "Codi. Experiments web i projectes personals."
             },
             {
                 "title": "Codepen",
                 "subt": "codepen.io/jomorespi",
-                "url": "https://codepen.io/jomorespi"
+                "url": "https://codepen.io/jomorespi",
+                "desc": "Més codi i més experiments, aquests enfocats a *front-end*."
+            },
+            {
+                "title": "Mastodon",
+                "subt": "@jomorespi@xarxa.cloud",
+                "url": "https://xarxa.cloud/@jomorespi",
+                "desc": "Renecs, reflexions i absurditats sobre webs, llibres, Linux i el món on ens ha tocat viure."
             },
             {
                 "title": "Bookwyrm",
                 "subt": "@jomorespi@plaerdemavida.cat",
-                "url": "https://plaerdemavida.cat/user/jomorespi"
+                "url": "https://plaerdemavida.cat/user/jomorespi",
+                "desc": "Diari de lectures. Algunes les comento i tot."
             }
         ]
     },
@@ -57,7 +62,8 @@
             {
                 "title": "Correu electrònic",
                 "subt": "hola@jordimoreno.cat",
-                "url": "mailto:hola@jordimoreno.cat"
+                "url": "mailto:hola@jordimoreno.cat",
+                "desc": "A la teva disposició per qualsevol cosa menys per *phishing*, propaganda i sopars de duro."
             }
         ]
     }
