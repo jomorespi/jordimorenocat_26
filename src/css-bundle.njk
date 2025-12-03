@@ -7,7 +7,7 @@ permalink: assets/css/style.css
 {% include "./assets/css/fonts.css" %}
 {% include "./assets/css/reset.css" %}
 {% include "./assets/css/variables.css" %}
-{% include "./assets/css/base.css" %}
+{% include "./assets/css/defaults.css" %}
 {% include "./assets/css/layout.css" %}
 {% endset %}
-{{ css | cssmin | safe }}
+{{ css | postcss | cssmin | safe }}

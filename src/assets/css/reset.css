@@ -37,6 +37,7 @@
 		text-decoration: none;
 		color: inherit;
 		font: inherit;
+		cursor: pointer;
 	}
 
 	p a {
@@ -73,7 +74,7 @@
 	mark,
 	del {
 		font: inherit;
-		line-height: 1em;
+		line-height: 1.5;
 		text-decoration: none;
 		color: inherit;
 		overflow-wrap: break-word;

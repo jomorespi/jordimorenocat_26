@@ -20,6 +20,9 @@
     "clean-css": "^5.3.3",
     "dotenv": "^17.2.3",
     "luxon": "^3.7.2",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-nesting": "^13.0.2",
     "terser": "^5.44.1"
   }
 }

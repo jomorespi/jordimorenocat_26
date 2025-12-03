@@ -4,6 +4,8 @@ const { DateTime } = require("luxon");
 const markdownIt = require('markdown-it');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+const postcss = require('postcss');
+const postcssNesting = require('postcss-nesting');
 
 const md = new markdownIt();
 
@@ -28,6 +30,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("jsmin", code => {
     const minified = Terser.minify(code);
     return minified.error ? code : minified.code;
+  });
+
+  // CSS Nesting
+  eleventyConfig.addFilter('postcss', async (css) => {
+    const result = await postcss([postcssNesting]).process(css, { from: undefined });
+    return result.css;
   });
 
   // Dates

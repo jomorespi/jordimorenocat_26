@@ -1,0 +1,21 @@
+@layer defaults {
+        
+    body {
+        font-family: var(--font-sans);
+        color: var(--color-dark);
+        background-color: var(--color-light);
+    }
+
+    .container {
+        width: 50rem;
+        max-width: calc(100% - 2rem);
+        margin-inline: auto;
+    }
+
+    .container-lg {
+        width: 117rem;
+        max-width: calc(100% - 2rem);
+        margin-inline: auto;
+    }
+
+}
