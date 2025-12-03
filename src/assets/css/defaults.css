@@ -6,16 +6,16 @@
         background-color: var(--color-light);
     }
 
-    .container {
-        width: 50rem;
-        max-width: calc(100% - 2rem);
-        margin-inline: auto;
+    h1 {
+        font-size: var(--text-2xl);
     }
 
-    .container-lg {
-        width: 117rem;
-        max-width: calc(100% - 2rem);
-        margin-inline: auto;
+    h2 {
+        font-size: var(--text-xl);
+    }
+
+    h3 {
+        font-size: var(--text-lg);
     }
 
 }

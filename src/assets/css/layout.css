@@ -1,5 +1,17 @@
 @layer layout {
 
+    .container {
+        width: 50rem;
+        max-width: calc(100% - 2rem);
+        margin-inline: auto;
+    }
+
+    .container-lg {
+        width: 117rem;
+        max-width: calc(100% - 2rem);
+        margin-inline: auto;
+    }
+
     header {
 
         margin-block: 18px;

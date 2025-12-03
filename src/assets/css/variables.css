@@ -10,11 +10,16 @@
     --color-borders: hsl(218, 14%, 84%);
     --color-white: hsl(0, 0%, 100%);
     
-    
     /* Fonts */
     --font-sans: Inter, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
     --font-serif: Sentient, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     --font-mono: GeistMono, Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+
+    /* Sizes */
+    --text-2xl: 2rem;
+    --text-xl: 1.75rem;
+    --text-lg: 1.25rem;
+    --text-sm: .875rem;
 
   }
 
