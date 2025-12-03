@@ -1,20 +1,22 @@
-:root {
-  --font-sans: Archivo, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-serif: Gambetta, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --font-mono: Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+@layer variables {
+  
+  :root {
 
-  --font-base: clamp(15px, 1.5vw + 1rem, 16px);
-  --font-lg: clamp(1rem, 1.2vw + 0.5rem, 1.25rem);
-  --font-sm: clamp(0.75rem, 0.8vw + 0.25rem, 0.875rem);
-  --font-xl: clamp(1rem, 1.8vw + 0.5rem, 1.5rem);
-  --font-2xl: clamp(1.5rem, 2.5vw + 0.5rem, 2rem);
-  --font-3xl: clamp(2rem, 3vw + 0.5rem, 2.5rem);
+    /* Colors */
+    --color-primary: hsl(167, 89%, 46%);
+    --color-secondary: hsl(0, 0%, 45%);
+    --color-dark: hsl(280, 15%, 28%);
+    --color-light: hsl(210, 17%, 98%);
+    --color-borders: hsl(218, 14%, 84%);
+    --color-white: hsl(0, 0%, 100%);
+    
+    
+    /* Fonts */
+    --font-sans: Geist, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+    --font-serif: Sentient, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    --font-mono: GeistMono, Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
 
-  --color-body: hsl(280, 15%, 28%);
-  --color-bg: hsl(210, 17%, 98%);
-  --color-primary: hsl(167, 89%, 46%);
-  --color-gray: hsl(0, 0%, 85%);
+  }
 
-  --transition-duration: .4s;
-  --transition-timing: ease-in-out;
+
 }

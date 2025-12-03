@@ -1,47 +1,178 @@
-/*
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
-*/
+@layer reset {
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+	/* Font: https://www.resetcss.pro/ */
 
-* {
-  margin: 0;
-}
+	:root {
+		font-size: 100%;
+		font-family: system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
-}
+	*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+		all: unset;
+		display: revert;
+	}
 
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
+	*::before,
+	*::after {
+		display: block;
+	}
 
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
+	img,
+	picture,
+	video,
+	iframe,
+	figure,
+	canvas {
+		max-width: 100%;
+		display: block;
+		width: 100%;
+		height: initial;
+		object-fit: cover;
+		object-position: center center;
+	}
 
-input, button, textarea, select {
-  font: inherit;
-}
+	a {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+		font: inherit;
+	}
 
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
+	p a {
+		display: inline;
+	}
 
-p {
-  text-wrap: pretty;
-}
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
+	li,
+	menu,
+	summary {
+		list-style-type: none;
+	}
 
-#root, #__next {
-  isolation: isolate;
+	ol {
+		counter-reset: revert;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	span,
+	a,
+	strong,
+	blockquote,
+	i,
+	b,
+	u,
+	em,
+	pre,
+	code,
+	mark,
+	del {
+		font: inherit;
+		line-height: 1em;
+		text-decoration: none;
+		color: inherit;
+		overflow-wrap: break-word;
+		text-wrap: pretty;
+	}
+
+	mark {
+		background-color: transparent;
+	}
+
+	blockquote::before,
+	blockquote::after,
+	q::before,
+	q::after {
+		content: none;
+	}
+
+	form,
+	input,
+	textarea,
+	select,
+	button,
+	label {
+		font: inherit;
+		hyphens: auto;
+		background-color: transparent;
+		color: inherit;
+		display: block;
+		appearance: none;
+	}
+
+	fieldset {
+		border: none;
+	}
+
+	::placeholder {
+		color: unset;
+	}
+
+	button,
+	label {
+		cursor: pointer;
+	}
+
+	table,
+	tr,
+	td,
+	th,
+	tbody,
+	thead,
+	tfoot {
+		border-collapse: collapse;
+		border-spacing: 0;
+		font: inherit;
+	}
+
+	svg {
+		width: 100%;
+		height: initial;
+		display: block;
+		fill: currentColor;
+	}
+
+	body {
+		min-height: 100vh;
+		line-height: 1.5em;
+		color: inherit;
+		hyphens: auto;
+		font-smooth: always;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	textarea {
+		white-space: pre-wrap;
+	}
+
+	:where([contenteditable]:not([contenteditable="false"])) {
+		-moz-user-modify: read-write;
+		-webkit-user-modify: read-write;
+		overflow-wrap: break-word;
+		-webkit-line-break: after-white-space;
+		-webkit-user-select: auto;
+	}
+
+	:where([draggable="true"]) {
+		-webkit-user-drag: element;
+	}
+
+	@media (prefers-reduced-motion : reduce) {
+		* {
+			animation: none !important;
+			transition: none !important;
+		}
+
+	}
+
+	::selection {
+		background-color: var(--color-primary);
+		color: var(--color-dark);
+	}
 }

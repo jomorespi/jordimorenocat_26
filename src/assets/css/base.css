@@ -1,48 +1,7 @@
-:root {
-    font-size: var(--font-base, 16px);
+@layer defaults {
     
-    ::selection {
-        background-color: var(--color-primary, #0ddeb0);
-        color: var(--color-body, #111);
+    html {
+        font-family: var(--font-sans);
     }
-}
 
-body {
-    font-family: var(--font-sans);
-    color: var(--color-body, #111);
-    background-color: var(--color-bg, #fff);
-    line-height: 1.6;
-
-}
-
-:where( h1, h2, h3, h4, h5 ) {
-    line-height: 1.25;
-    font-weight: 400;
-}
-
-h1 {
-    font-size: var(--font-3xl, 2.5rem);
-    margin-bottom: 1rem;
-}
-
-h2 {
-    font-size: var(--font-2xl, 2rem);
-    margin-bottom: 0.75rem;
-}
-
-h3 {
-    font-size: var(--font-xl, 1.5rem);
-    margin-bottom: 0.5rem;
-}
-
-p {
-    font-size: var(--font-base, 18px);
-    margin-bottom: 1.5rem;
-}
-
-a {
-    color: inherit;
-    text-decoration: underline wavy var(--color-primary);
-    text-underline-offset: 7px;
-    /* font-weight: 500; */
 }

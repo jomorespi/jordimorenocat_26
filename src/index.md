@@ -1,5 +1,5 @@
 ---
-title: Faig textos explícits i webs accessibles
+title: Jordi Moreno Crespi
 layout: layout.njk
 eleventyNavigation:
     key: jordimoreno.cat
