@@ -21,6 +21,9 @@
     --text-lg: 1.25rem;
     --text-sm: .875rem;
 
+    /* Alignment */
+    --text-align: left;
+
   }
 
 

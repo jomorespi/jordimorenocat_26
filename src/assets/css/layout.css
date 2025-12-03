@@ -1,7 +1,7 @@
 @layer layout {
 
     .container {
-        width: 50rem;
+        width: 36rem;
         max-width: calc(100% - 2rem);
         margin-inline: auto;
     }
@@ -25,11 +25,13 @@
                 flex-wrap: wrap;
                 gap: 1rem;
                 background-color: var(--color-white);
+                margin: 0;
                 padding: 9px 15px;
                 border-radius: .5rem;
                 max-width: fit-content;
 
                 li {
+                    margin: 0;
 
                     a {
                         display: block;
