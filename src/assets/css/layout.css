@@ -1,7 +1,7 @@
 @layer layout {
 
     .container {
-        width: 36rem;
+        width: 25rem;
         max-width: calc(100% - 2rem);
         margin-inline: auto;
     }

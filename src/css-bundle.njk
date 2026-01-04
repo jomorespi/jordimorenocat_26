@@ -9,5 +9,6 @@ permalink: assets/css/style.css
 {% include "./assets/css/variables.css" %}
 {% include "./assets/css/defaults.css" %}
 {% include "./assets/css/layout.css" %}
+{% include "./assets/css/components.css" %}
 {% endset %}
 {{ css | postcss | cssmin | safe }}

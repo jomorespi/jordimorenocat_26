@@ -1,14 +1,8 @@
----
-layout: layout.njk
-title: Enllaços
-eleventyNavigation:
-    key: Links
-    order: 2
----
+<h2>Enllaços</h2>
 
 {% for section, data in links %}
-  <h2>{{ data.title }}</h2>
-  <ul>
+  <h3>{{ data.title }}</h3>
+  <ul class="marker-list">
     {%- for link in data.items -%}
       <li>
         <a href="{{ link.url }}" target="_blank">{{ link.title }}</a> {% if link.subt %}&lpar;{{ link.subt }}&rpar;{% endif %}
