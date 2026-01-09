@@ -4,14 +4,14 @@
 
     @font-face {
         font-family: "Geist";
-        src: url("/assets/fonts/Geist.ttf") format("truetype-variations");
+        src: url("/assets/fonts/Geist.woff2") format("truetype-variations");
         font-weight: 100 900;
         font-style: normal;
     }
 
     @font-face {
         font-family: "Geist";
-        src: url("/assets/fonts/Geist-Italic.ttf") format("truetype-variations");
+        src: url("/assets/fonts/Geist-Italic.woff2") format("truetype-variations");
         font-weight: 100 900;
         font-style: italic;
     }
