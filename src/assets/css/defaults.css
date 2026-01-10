@@ -26,8 +26,12 @@
         color: var(--color-dark);
     }
 
-    :where(h1, h2, h3, h4, h5, p, ul, ol, li, blockquote) {
+    :where(h1, h2, h3, h4, h5) {
         margin-bottom: .25rem;
+    }
+
+    :where(p, ul, ol, li, blockquote) {
+        margin-bottom: 1rem;
     }
 
     b, strong {

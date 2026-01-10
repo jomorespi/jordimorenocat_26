@@ -1,4 +1,10 @@
-<h2>Blog</h2>
+---
+title: Blog
+layout: layout.njk
+eleventyNavigation:
+    key: Blog
+    order: 3
+---
 
 <ul class="marker-list">
     {%- for post in collections.blog | reverse -%}

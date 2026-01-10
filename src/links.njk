@@ -1,7 +1,13 @@
-<h2>Enllaços</h2>
+---
+title: Enllaços
+layout: layout.njk
+eleventyNavigation:
+    key: Enllaços
+    order: 2
+---
 
 {% for section, data in links %}
-  <h3>{{ data.title }}</h3>
+  <h2>{{ data.title }}</h2>
   <ul class="marker-list">
     {%- for link in data.items -%}
       <li>
