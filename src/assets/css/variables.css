@@ -24,6 +24,10 @@
     /* Alignment */
     --text-align: left;
 
+    /* Transitions */
+    --transition-duration: .3s;
+    --transition-function: ease-in-out;
+
   }
 
 }

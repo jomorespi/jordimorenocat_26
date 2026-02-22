@@ -12,7 +12,7 @@
         margin-inline: auto;
     }
 
-    header {
+    header.main-header {
 
         position: sticky;
         top: 18px;

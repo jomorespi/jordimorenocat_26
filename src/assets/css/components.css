@@ -15,9 +15,13 @@
     }
 
     .marker-list {
+
+        margin-bottom: 4rem;
+
         li {
             padding-left: 1.25rem;
             position: relative;
+            margin-bottom: 2rem;
 
             &::before {
                 content: "";
@@ -29,9 +33,69 @@
                 border-radius: .125rem .125rem .125rem .375rem;
                 position: absolute;
                 left: 0;
-                top: .35em;
+                top: .5em;
+                transition: var(--transition-duration) background-color var(--transition-function);
             }
+            
+            &::after {
+                content: "";
+                display: block;
+                background-color: transparent;
+                position: absolute;
+                inset: -.5rem;
+                border-radius: .5rem;
+                z-index: -1;
+                transition: var(--transition-duration) background-color var(--transition-function);
+            }
+
+            :is(h2, h3) {
+                transition: var(--transition-duration) font-weight var(--transition-function);
+            }
+            
+            .marker-list__subt {
+                transition: var(--transition-duration) color var(--transition-function);
+            }
+            
+            &:is(:hover, :focus-within) {
+                &::before {
+                    background-color: var(--color-primary);
+                }
+                
+                &::after {
+                    background-color: var(--color-white);
+                }
+    
+                :is(h2, h3) {
+                    font-weight: 400;
+                }
+
+                .marker-list__subt {
+                    color: var(--color-dark);
+                }
+    
+            }
+
         }
+
+    }
+
+    body.page-index {
+        .container {
+            min-height: calc(60svh - 3rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    
+    .page-heading {
+        text-decoration: underline;
+        text-decoration-color: var(--color-primary);
+        text-underline-offset: 20%;
+    }
+
+    .section-heading {
+        font-weight: 400;
     }
 
 }
