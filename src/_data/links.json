@@ -31,6 +31,12 @@
                 "desc": "Perfil professional, currículum i algunes publicacions sobre desenvolupament web i accessibilitat."
             },
             {
+                "title": "Mastodon",
+                "subt": "@jomorespi@xarxa.cloud",
+                "url": "https://xarxa.cloud/@jomorespi",
+                "desc": "Renecs i comentaris sobre webs, llibres, Linux i el món on ens ha tocat viure."
+            },
+            {
                 "title": "Github",
                 "subt": "github.com/jomorespi",
                 "url": "https://github.com/jomorespi",
@@ -41,18 +47,6 @@
                 "subt": "codepen.io/jomorespi",
                 "url": "https://codepen.io/jomorespi",
                 "desc": "Més codi i més experiments, aquests enfocats a *front-end*."
-            },
-            {
-                "title": "Mastodon",
-                "subt": "@jomorespi@xarxa.cloud",
-                "url": "https://xarxa.cloud/@jomorespi",
-                "desc": "Renecs i comentaris sobre webs, llibres, Linux i el món on ens ha tocat viure."
-            },
-            {
-                "title": "Bookwyrm",
-                "subt": "@jomorespi@plaerdemavida.cat",
-                "url": "https://plaerdemavida.cat/user/jomorespi",
-                "desc": "Diari de lectures. Algunes les comento i tot."
             }
         ]
     },

@@ -31,8 +31,12 @@
         color: var(--color-primary);
     }
 
-    .text-secondary {
-        color: var(--color-secondary);
+    .text-dark {
+        color: var(--color-dark);
+    }
+
+    .text-muted {
+        color: var(--color-muted);
     }
 
     .text-2xl {

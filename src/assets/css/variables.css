@@ -7,6 +7,7 @@
     --color-dark: hsl(280, 8%, 20%);
     --color-light: hsl(200, 20%, 97%);
     --color-borders: hsl(200, 12%, 88%);
+    --color-muted: hsl(200, 15%, 35%);
     --color-white: hsl(0, 0%, 100%);
     
     /* Fonts */

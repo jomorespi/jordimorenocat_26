@@ -8,7 +8,7 @@ eleventyNavigation:
 
 {% for section, data in links %}
   <section>
-    <h2 class="section-heading">{{ data.title }}</h2>
+    <h2 class="section-heading mb-4">{{ data.title }}</h2>
     <ul class="marker-list links-list">
       {%- for link in data.items -%}
         {% include 'link-item.njk' %}

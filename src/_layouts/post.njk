@@ -4,8 +4,11 @@ layout: layout.njk
 
 <article class="post">
     <header class="post-header mb-8">
-        <h1 class="post-title mb-2">{{ title }}</h1>
-        <p class="post-date text-sm">{{ date | formatDate }}</p>
+        <div>
+            <h1 class="post-title mb-2">{{ title }}</h1>
+            <p class="post-date text-sm text-muted m-0">{{ date | formatDate }}</p>
+        </div>
+        <a href="/blog/" class="post-blog-link text-muted"><span class="text-dark">&larr;</span> Blog</a>
     </header>
 
     <div class="post-content">

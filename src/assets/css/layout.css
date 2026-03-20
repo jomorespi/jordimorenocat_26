@@ -15,8 +15,9 @@
     header.main-header {
 
         position: sticky;
-        top: 18px;
-        margin-bottom: 18px;
+        top: 1.2rem;
+        margin-bottom: 3rem;
+        z-index: 10;
         
         nav {
 
