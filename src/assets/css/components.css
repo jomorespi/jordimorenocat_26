@@ -65,16 +65,12 @@
                     background-color: var(--color-primary);
                 }
                 
-                &::after {
+                /* &::after {
                     background-color: var(--color-white);
-                }
+                } */
     
                 :is(h2, h3) {
-                    font-weight: 400;
-                }
-
-                .marker-list__subt {
-                    color: var(--color-dark);
+                    font-weight: 700;
                 }
     
             }
@@ -99,7 +95,7 @@
     }
 
     .section-heading {
-        font-weight: 400;
+        font-weight: 700;
     }
 
 }

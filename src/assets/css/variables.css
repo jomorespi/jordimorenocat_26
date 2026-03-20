@@ -4,21 +4,21 @@
 
     /* Colors */
     --color-primary: hsl(167, 89%, 46%);
-    --color-secondary: hsl(0, 0%, 45%);
-    --color-dark: hsl(280, 15%, 28%);
-    --color-light: hsl(210, 17%, 98%);
-    --color-borders: hsl(218, 14%, 84%);
+    --color-dark: hsl(280, 8%, 20%);
+    --color-light: hsl(200, 20%, 97%);
+    --color-borders: hsl(200, 12%, 88%);
     --color-white: hsl(0, 0%, 100%);
     
     /* Fonts */
-    --font-sans: Geist, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+    --font-sans: "Atkinson Hyperlegible Next", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
     --font-serif: Sentient, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-    --font-mono: GeistMono, Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+    --font-mono: "Atkinson Hyperlegible Mono", Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
 
     /* Sizes */
     --text-2xl: 2rem;
     --text-xl: 1.25rem;
     --text-lg: 1.15rem;
+    --text-base: 1rem;
     --text-sm: .875rem;
 
     /* Alignment */

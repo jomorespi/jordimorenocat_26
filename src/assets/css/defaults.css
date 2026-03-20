@@ -1,11 +1,16 @@
 @layer defaults {
+
+    :root {
+        font-size: 16px;
+    }
         
     body {
         font-family: var(--font-sans);
-        color: var(--color-secondary);
+        font-size: var(--text-base);
+        font-weight: 400;
+        color: var(--color-dark);
         background-color: var(--color-light);
         text-align: var(--text-align);
-        font-weight: 350;
     }
 
     :where(h1, .h1) {
@@ -22,8 +27,7 @@
     }
 
     :where(h1, h2, h3) {
-        font-weight: 250;
-        color: var(--color-dark);
+        font-weight: 700;
     }
 
     :where(h1, h2, h3, h4, h5) {
@@ -35,15 +39,11 @@
     }
 
     b, strong {
-        font-weight: 600;
+        font-weight: 700;
     }
 
     i, em {
         font-style: italic;
-    }
-
-    a {
-        color: var(--color-dark);
     }
 
 }
