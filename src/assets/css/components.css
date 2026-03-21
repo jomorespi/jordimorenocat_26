@@ -94,8 +94,9 @@
         .container {
             min-height: calc(60svh - 3rem);
             display: flex;
-            flex-direction: column-reverse;
-            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-content: center;
             gap: 1rem 1.5rem;
         }
     }
@@ -130,7 +131,7 @@
         }
     }
 
-    @media (min-width: 460px) {
+    /* @media (min-width: 560px) {
         body.page-index {
             .container {
                 flex-direction: row-reverse;
@@ -138,6 +139,6 @@
                 align-items: center;
             }
         }
-    }
+    } */
 
 }

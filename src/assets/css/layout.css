@@ -45,6 +45,7 @@
                             background-color: var(--color-borders);
                             margin-right: .4rem;
                             border-radius: .125rem .125rem .125rem .375rem;
+                            transition: var(--transition-duration) background-color var(--transition-function);
                         }
 
                         &:is(:hover, :focus-visible) {
