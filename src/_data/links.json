@@ -27,26 +27,22 @@
             {
                 "title": "Linkedin",
                 "subt": "/in/jomorespi",
-                "url": "https://www.linkedin.com/in/jomorespi/?locale=xx_XX",
-                "desc": "Perfil professional, currículum i algunes publicacions sobre desenvolupament web i accessibilitat."
+                "url": "https://www.linkedin.com/in/jomorespi/?locale=xx_XX"
             },
             {
                 "title": "Mastodon",
                 "subt": "@jomorespi@xarxa.cloud",
-                "url": "https://xarxa.cloud/@jomorespi",
-                "desc": "Renecs i comentaris sobre webs, llibres, Linux i el món on ens ha tocat viure."
+                "url": "https://xarxa.cloud/@jomorespi"
             },
             {
                 "title": "Github",
                 "subt": "github.com/jomorespi",
-                "url": "https://github.com/jomorespi",
-                "desc": "Codi. Experiments web i projectes personals."
+                "url": "https://github.com/jomorespi"
             },
             {
                 "title": "Codepen",
                 "subt": "codepen.io/jomorespi",
-                "url": "https://codepen.io/jomorespi",
-                "desc": "Més codi i més experiments, aquests enfocats a *front-end*."
+                "url": "https://codepen.io/jomorespi"
             }
         ]
     },
@@ -56,8 +52,7 @@
             {
                 "title": "Correu electrònic",
                 "subt": "hola@jordimoreno.cat",
-                "url": "mailto:hola@jordimoreno.cat",
-                "desc": "A la teva disposició per qualsevol cosa menys per *phishing*, propaganda i sopars de duro."
+                "url": "mailto:hola@jordimoreno.cat"
             }
         ]
     }

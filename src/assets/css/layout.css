@@ -2,13 +2,13 @@
 
     .container {
         width: 65ch;
-        max-width: calc(100% - 2rem);
+        max-width: calc(100% - 3rem);
         margin-inline: auto;
     }
 
     .container-lg {
         width: 117rem;
-        max-width: calc(100% - 2rem);
+        max-width: calc(100% - 3rem);
         margin-inline: auto;
     }
 
