@@ -18,6 +18,9 @@ module.exports = function(eleventyConfig) {
   // Fonts
   eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "assets/fonts" });
 
+  // Images
+  eleventyConfig.addPassthroughCopy({ "src/assets/img": "assets/img" });
+
   // Watch
   eleventyConfig.addWatchTarget("src/assets/css");
   eleventyConfig.addWatchTarget("src/assets/js");

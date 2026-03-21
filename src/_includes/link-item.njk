@@ -5,7 +5,7 @@
         <p class="m-0 marker-list__subt text-muted">&lpar;{{ link.subt }}&rpar;</p>
         {% endif %}
         {% if link.desc %}
-        {{ link.desc | markdown | safe }}
+        <div class="marker-list__desc">{{ link.desc | markdown | safe }}</div>
         {% endif %}
     </a>
 </li>
