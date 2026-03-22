@@ -11,9 +11,9 @@
     --color-white: hsl(0, 0%, 100%);
     
     /* Fonts */
-    --font-sans: "Atkinson Hyperlegible Next", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
-    --font-serif: Sentient, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-    --font-mono: "JetBrains Mono", Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+    --font-sans: "Atkinson Hyperlegible Next", sans-serif;
+    --font-serif: Sentient, serif;
+    --font-mono: "JetBrains Mono", monospace;
 
     /* Sizes */
     --text-2xl: 2rem;
@@ -29,6 +29,16 @@
     --transition-duration: .3s;
     --transition-function: ease-in-out;
 
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-dark: hsl(280, 8%, 90%);
+      --color-light: hsl(200, 20%, 15%);
+      --color-borders: hsl(200, 12%, 25%);
+      --color-muted: hsl(200, 15%, 70%);
+      --color-white: hsl(0, 0%, 5%);
+    }
   }
 
 }
