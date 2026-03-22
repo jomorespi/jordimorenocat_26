@@ -10,17 +10,15 @@
 
     {% include 'header.njk' %}
 
-    <main class="container">
+    <main class="container main-content">
     
         {{ content | safe }}
     
     </main>
 
-    <footer>
-        
-    </footer>
+    {% include 'aside.njk' %}
 
-    
+    {# {% include 'footer.njk' %} #}
 
     <script src="/assets/js/app.js"></script>
 

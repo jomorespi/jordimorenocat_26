@@ -91,7 +91,7 @@
     }
 
     body.page-index {
-        .container {
+        .main-content {
             min-height: calc(60svh - 3rem);
             display: flex;
             flex-wrap: wrap;
@@ -130,15 +130,5 @@
             }
         }
     }
-
-    /* @media (min-width: 560px) {
-        body.page-index {
-            .container {
-                flex-direction: row-reverse;
-                justify-content: flex-end;
-                align-items: center;
-            }
-        }
-    } */
 
 }
