@@ -33,7 +33,6 @@
                             background-color: var(--color-borders);
                             margin-right: .4rem;
                             border-radius: .125rem .125rem .125rem .375rem;
-                            transition: var(--transition-duration) background-color var(--transition-function);
                         }
 
                         &:is(:hover, :focus-visible) {
@@ -61,7 +60,7 @@
             bottom: 1.2rem;
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 1.5rem;
             background-color: var(--color-white);
             margin: 0;
             padding: 9px 15px;
@@ -70,6 +69,11 @@
 
             li {
                 margin: 0;
+
+                button {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
             }
         }
     }
@@ -107,7 +111,6 @@
         li {
             padding-left: 1.25rem;
             position: relative;
-            transition: var(--transition-duration) color var(--transition-function);
 
             &::before {
                 content: "";
@@ -120,7 +123,6 @@
                 position: absolute;
                 left: 0;
                 top: .4em;
-                transition: var(--transition-duration) background-color var(--transition-function);
             }
             
             &::after {
@@ -131,13 +133,10 @@
                 inset: -.5rem;
                 border-radius: .5rem;
                 z-index: -1;
-                transition: var(--transition-duration) background-color var(--transition-function);
             }
 
             :is(h2, h3, .marker-list__subt, .marker-list__desc) {
                 transition-property: color font-weight;
-                transition-duration: var(--transition-duration);
-                transition-timing-function: var(--transition-function);
             }
             
             &:is(:hover, :focus-within) {
@@ -193,10 +192,6 @@
     }
 
     .post-blog-link {
-
-        span {
-            transition: var(--transition-duration) color var(--transition-function);
-        }
 
         &:is(:hover, :focus-visible) {
             span {

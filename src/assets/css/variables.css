@@ -1,6 +1,6 @@
 @layer variables {
   
-  :root {
+  html {
 
     /* Colors */
     --color-primary: hsl(167, 89%, 46%);
@@ -31,14 +31,12 @@
 
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --color-dark: hsl(280, 8%, 90%);
-      --color-light: hsl(200, 20%, 15%);
-      --color-borders: hsl(200, 12%, 25%);
-      --color-muted: hsl(200, 15%, 70%);
-      --color-white: hsl(0, 0%, 5%);
-    }
+  [data-theme="dark"] {
+    --color-dark: hsl(280, 8%, 90%);
+    --color-light: hsl(200, 20%, 15%);
+    --color-borders: hsl(200, 12%, 25%);
+    --color-muted: hsl(200, 15%, 70%);
+    --color-white: hsl(0, 0%, 5%);
   }
 
 }

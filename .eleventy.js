@@ -25,13 +25,16 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("src/assets/css");
   eleventyConfig.addWatchTarget("src/assets/js");
 
+  // Passthrough JS as module files
+  eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
+
   // Minify
   eleventyConfig.addFilter("cssmin", code =>
     new CleanCSS({}).minify(code).styles
   );
 
-  eleventyConfig.addFilter("jsmin", code => {
-    const minified = Terser.minify(code);
+  eleventyConfig.addAsyncFilter("jsmin", async code => {
+    const minified = await Terser.minify(code);
     return minified.error ? code : minified.code;
   });
 
@@ -49,33 +52,6 @@ module.exports = function(eleventyConfig) {
   // Json markdown format
   eleventyConfig.addFilter('markdown', (content) => {
     return md.render(content);
-  });
-
-  // Include file filter
-  eleventyConfig.addFilter('includeFile', function(path) {
-    const fs = require('fs');
-    const fullPath = require('path').join(__dirname, 'src', path);
-    return fs.readFileSync(fullPath, 'utf8');
-  });
-
-  // Bundle JS shortcode
-  eleventyConfig.addShortcode("bundleJS", function() {
-    const fs = require('fs');
-    const path = require('path');
-    const jsPath = path.join(__dirname, 'src', 'assets', 'js', 'custom.js');
-    const code = fs.readFileSync(jsPath, 'utf8');
-    const minified = Terser.minify(code);
-    return minified.error ? code : minified.code;
-  });
-
-  // Global data for bundled JS
-  eleventyConfig.addGlobalData("bundledJS", async () => {
-    const fs = require('fs');
-    const path = require('path');
-    const jsPath = path.join(__dirname, 'src', 'assets', 'js', 'custom.js');
-    const code = fs.readFileSync(jsPath, 'utf8');
-    const minified = await Terser.minify(code);
-    return minified.error ? code : minified.code;
   });
 
   // Navigation
