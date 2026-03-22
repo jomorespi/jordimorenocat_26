@@ -46,4 +46,9 @@
         font-style: italic;
     }
 
+    *:focus-visible {
+        outline: 2px dashed var(--color-muted);
+        outline-offset: .5rem;
+    }
+
 }
