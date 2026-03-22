@@ -1,8 +1,5 @@
 ---
-permalink: assets/js/app.css
+permalink: assets/js/app.js
 ---
 
-{% set js %}
-{% include "./assets/js/custom.js" %}
-{% endset %}
-{{ js | jsmin | safe }}
+{{ bundledJS | safe }}

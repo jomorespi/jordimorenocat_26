@@ -51,6 +51,33 @@ module.exports = function(eleventyConfig) {
     return md.render(content);
   });
 
+  // Include file filter
+  eleventyConfig.addFilter('includeFile', function(path) {
+    const fs = require('fs');
+    const fullPath = require('path').join(__dirname, 'src', path);
+    return fs.readFileSync(fullPath, 'utf8');
+  });
+
+  // Bundle JS shortcode
+  eleventyConfig.addShortcode("bundleJS", function() {
+    const fs = require('fs');
+    const path = require('path');
+    const jsPath = path.join(__dirname, 'src', 'assets', 'js', 'custom.js');
+    const code = fs.readFileSync(jsPath, 'utf8');
+    const minified = Terser.minify(code);
+    return minified.error ? code : minified.code;
+  });
+
+  // Global data for bundled JS
+  eleventyConfig.addGlobalData("bundledJS", async () => {
+    const fs = require('fs');
+    const path = require('path');
+    const jsPath = path.join(__dirname, 'src', 'assets', 'js', 'custom.js');
+    const code = fs.readFileSync(jsPath, 'utf8');
+    const minified = await Terser.minify(code);
+    return minified.error ? code : minified.code;
+  });
+
   // Navigation
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
