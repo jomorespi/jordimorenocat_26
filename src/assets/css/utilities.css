@@ -62,4 +62,16 @@
     .font-medium {
         font-weight: 500;
     }
+
+    .font-sans {
+        font-family: var(--font-sans);
+    }
+
+    .font-serif {
+        font-family: var(--font-serif);
+    }
+
+    .font-mono {
+        font-family: var(--font-mono);
+    }
 }

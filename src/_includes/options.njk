@@ -1,17 +1,39 @@
-<ul class="options" aria-label="Opcions de visualització">
-    <li>
-        <button id="theme-toggle" aria-label="Mode nit/dia">
-            <span class="dark">{% include 'icons/sun.svg' %}</span>
-            <span class="light">{% include 'icons/moon.svg' %}</span>
-        </button>
-    </li>
-    <li>
-        <button aria-label="Tipus de lletra">{% include 'icons/typo.svg' %}</button>
-    </li>
-    <li>
-        <button aria-label="Mida de lletra">{% include 'icons/text-size.svg' %}</button>
-    </li>
-    <li>
-        <button aria-label="Alineació del text">{% include 'icons/text-left.svg' %}</button>
-    </li>
-</ul>
+<div class="options">
+    <ul aria-label="Opcions de visualització">
+        <li>
+            <button id="theme-toggle" aria-label="Mode nit/dia">
+                <span class="dark">{% include 'icons/sun.svg' %}</span>
+                <span class="light">{% include 'icons/moon.svg' %}</span>
+            </button>
+        </li>
+        <li>
+            <button id="font-switch" aria-label="Tipus de lletra">
+                {% include 'icons/typo.svg' %}
+            </button>
+            <fieldset class="options__submenu options__submenu--font">
+                <legend class="sr-only">Tipus de lletra</legend>
+                <ul>
+                    <li>
+                        <input type="radio" name="font-type" id="font-type--sans" value="sans" checked="checked">
+                        <label for="font-type--sans">Pal sec</label>
+                    </li>
+                    <li class="font-serif">
+                        <input type="radio" name="font-type" value="serif" id="font-type--serif">
+                        <label for="font-type--serif">Romana</label>
+                    </li>
+                    <li class="font-mono">
+                        <input type="radio" name="font-type" value="mono" id="font-type--mono">
+                        <label for="font-type--mono">Monoespaiada</label>
+                    </li>
+                </ul>
+            </fieldset>
+    
+        </li>
+        <li>
+            <button aria-label="Mida de lletra">{% include 'icons/text-size.svg' %}</button>
+        </li>
+        <li>
+            <button aria-label="Alineació del text">{% include 'icons/text-left.svg' %}</button>
+        </li>
+    </ul>
+</div>
