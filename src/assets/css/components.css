@@ -74,6 +74,29 @@
                     width: 1.5rem;
                     height: 1.5rem;
                 }
+
+                #theme-toggle {
+                    .dark {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    [data-theme="dark"] {
+        .main-header {
+            .options {
+                li {
+                    #theme-toggle {
+                        .dark {
+                            display: block;
+                        }
+                        .light {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
     }
@@ -194,7 +217,7 @@
     .post-blog-link {
 
         &:is(:hover, :focus-visible) {
-            span {
+            b {
                 color: var(--color-primary);
             }
         }
