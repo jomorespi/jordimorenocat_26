@@ -12,18 +12,18 @@
             </button>
             <fieldset class="options__submenu options__submenu--font">
                 <legend class="sr-only">Tipus de lletra</legend>
-                <ul>
-                    <li class="font-sans">
+                <ul class="font-sans">
+                    <li>
                         <input type="radio" name="font-type" id="font-type--sans" value="sans" checked="checked">
-                        <label for="font-type--sans">Pal sec</label>
+                        <label for="font-type--sans" class="font-sans">Atkinson Hyperlegible</label>
                     </li>
-                    <li class="font-serif">
+                    <li>
                         <input type="radio" name="font-type" value="serif" id="font-type--serif">
-                        <label for="font-type--serif">Romana</label>
+                        <label for="font-type--serif" class="font-serif">Sentient</label>
                     </li>
-                    <li class="font-mono">
+                    <li>
                         <input type="radio" name="font-type" value="mono" id="font-type--mono">
-                        <label for="font-type--mono">Monoespaiada</label>
+                        <label for="font-type--mono" class="font-mono">JetBrains Mono</label>
                     </li>
                 </ul>
             </fieldset>
@@ -34,6 +34,9 @@
         </li>
         <li>
             <button aria-label="Alineació del text">{% include 'icons/text-left.svg' %}</button>
+        </li>
+        <li>
+            <button class="option--disabled" aria-label="Restaurar valors per defecte" aria-hidden="true">{% include 'icons/restore.svg' %}</button>
         </li>
     </ul>
 </div>

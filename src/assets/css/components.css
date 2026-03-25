@@ -83,6 +83,11 @@
                             display: none;
                         }
                     }
+
+                    .option--disabled {
+                        opacity: .3;
+                        pointer-events: none;
+                    }
     
                     .options__submenu {
                         position: absolute;
@@ -104,14 +109,10 @@
                     }
 
                     .options__submenu--font {
-
-                        label {
-                            padding: .25rem .5rem;
-                            border-radius: .25rem;
-                        }
-
-                        input:checked + label {
-                            background-color: var(--color-primary)
+                        li {
+                            display: flex;
+                            align-items: center;
+                            line-height: 1.2;
                         }
                     }
 

@@ -69,4 +69,32 @@
         border-width: 0;
     }
 
+    input[type="radio"] {
+        min-width: .6rem;
+        width: .6rem;
+        height: .6rem;
+        position: static;
+        display: inline-block;
+        border-radius: 1rem;
+        outline: 1px solid var(--color-borders);
+        outline-offset: 2px;
+        transition-property: border-color background-color;
+        margin: 0 .6rem 0 3px;
+
+        + label {
+            display: inline-block;
+        }
+
+        &:checked {
+            background-color: var(--color-primary);
+            outline-color: var(--color-dark);
+
+        }
+        
+        &:focus-visible + label {
+            outline: 2px dashed var(--color-muted);
+            outline-offset: .25rem;
+        }
+    }
+
 }
