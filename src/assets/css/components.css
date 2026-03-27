@@ -109,10 +109,25 @@
                     }
 
                     .options__submenu--font {
+                        ul {
+                            display: grid;
+                            gap: .75rem;
+                        }
                         li {
                             display: flex;
-                            align-items: center;
-                            line-height: 1.2;
+                            line-height: 1.4;
+                            gap: .5rem;
+
+                            label {
+                                small {
+                                    font-size: var(--text-sm);
+                                    color: var(--color-muted);
+                                    display: block;
+                                }
+                            }
+                            input {
+                                margin-top: .45em;
+                            }
                         }
                     }
 
