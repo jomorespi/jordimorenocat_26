@@ -1,13 +1,12 @@
 @layer defaults {
 
     :root {
-        font-size: 16px;
-    }
-        
-    body {
         font-family: var(--font-sans);
         font-size: var(--text-base);
         font-weight: 400;
+    }
+        
+    body {
         color: var(--color-dark);
         background-color: var(--color-light);
         text-align: var(--text-align);

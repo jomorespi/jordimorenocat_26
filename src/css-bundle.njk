@@ -10,6 +10,9 @@ permalink: assets/css/style.css
 {% include "./assets/css/defaults.css" %}
 {% include "./assets/css/layout.css" %}
 {% include "./assets/css/utilities.css" %}
+{% include "./assets/css/inc/marker-list.css" %}
+{% include "./assets/css/inc/header-nav.css" %}
+{% include "./assets/css/inc/header-options.css" %}
 {% include "./assets/css/components.css" %}
 {% endset %}
 {{ css | postcss | cssmin | safe }}

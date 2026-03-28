@@ -40,9 +40,16 @@
         </li>
         <li>
             <button aria-label="Mida de lletra">{% include 'icons/text-size.svg' %}</button>
+            <fieldset class="options__submenu options__submenu--size">
+                <legend class="sr-only">Mida de la lletra</legend>
+                <input type="range" name="font-size" id="font-size">
+            </fieldset>
         </li>
         <li>
             <button aria-label="Alineació del text">{% include 'icons/text-left.svg' %}</button>
+            <fieldset class="options__submenu options__submenu--align">
+                <legend class="sr-only">Alineació del text</legend>
+            </fieldset>
         </li>
         <li>
             <button class="option--disabled" aria-label="Restaurar valors per defecte" aria-hidden="true">{% include 'icons/restore.svg' %}</button>

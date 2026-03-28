@@ -1,9 +1,7 @@
-import { transitionVars } from "./inc/transition-vars.js";
-import { themeSwitcher } from "./inc/theme-switcher.js";
-import { fontSwitcher } from "./inc/font-switcher.js";
+import transitionVars from "./inc/transition-vars.js";
+import options from "./inc/options.js";
 
 window.addEventListener("DOMContentLoaded", function() {
     transitionVars();
-    themeSwitcher();
-    fontSwitcher();
+    options();
 });

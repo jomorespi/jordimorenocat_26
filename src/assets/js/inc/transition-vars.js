@@ -1,4 +1,4 @@
-export function transitionVars() {
+const transitionVars = () => {
     const root = document.documentElement;
 
     setTimeout(() => {
@@ -6,3 +6,5 @@ export function transitionVars() {
         root.style.setProperty("--transition-function", 'ease-in-out');
     }, 150);
 }
+
+export default transitionVars;

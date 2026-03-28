@@ -1,0 +1,63 @@
+.marker-list {
+
+        margin-bottom: 3rem;
+
+        &.links-list {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        }
+
+        li {
+            padding-left: 1.25rem;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: .8rem;
+                height: .75rem;
+                background-color: var(--color-primary);
+                margin-right: .5rem;
+                border-radius: .125rem .125rem .125rem .375rem;
+                position: absolute;
+                left: 0;
+                top: .4em;
+            }
+            
+            &::after {
+                content: "";
+                display: block;
+                background-color: transparent;
+                position: absolute;
+                inset: -.5rem;
+                border-radius: .5rem;
+                z-index: -1;
+            }
+
+            :is(h2, h3, .marker-list__subt, .marker-list__desc) {
+                transition-property: color font-weight;
+            }
+            
+            &:is(:hover, :focus-within) {
+                
+                &::before {
+                    background-color: var(--color-borders);
+                }
+                
+                :is(h2, h3) {
+                    font-weight: 700;
+                }
+                
+                .marker-list__subt {
+                    color: var(--color-dark);
+                }
+                
+                .marker-list__desc {
+                    color: var(--color-muted);
+                }
+
+        }
+
+    }
+}
