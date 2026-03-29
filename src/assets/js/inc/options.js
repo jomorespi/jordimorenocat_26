@@ -28,6 +28,18 @@ const options = () => {
         });
     }
 
+    // Close submenus when clicking outside
+    document.addEventListener("click", (e) => {
+        const isClickInside = e.target.closest(".options");
+
+        if (!isClickInside) {
+            const optionWrappers = document.querySelectorAll(".options__submenu");
+            optionWrappers.forEach(w => {
+                w.classList.remove("options__submenu--visible");
+            });
+        }
+    });
+
 
     // Theme Switcher
     const themeSwitcher = () => {
