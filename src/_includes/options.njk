@@ -10,7 +10,7 @@
             <button id="font-switch" aria-label="Tipus de lletra">
                 {% include 'icons/typo.svg' %}
             </button>
-            <fieldset class="options__submenu options__submenu--font">
+            <fieldset class="options__submenu options__submenu--font" aria-hidden="true" inert>
                 <legend class="sr-only">Tipus de lletra</legend>
                 <ul>
                     <li>
@@ -40,14 +40,14 @@
         </li>
         <li>
             <button aria-label="Mida de lletra">{% include 'icons/text-size.svg' %}</button>
-            <fieldset class="options__submenu options__submenu--size">
+            <fieldset class="options__submenu options__submenu--size" aria-hidden="true" inert>
                 <legend class="sr-only">Mida de la lletra</legend>
                 <input type="range" name="font-size" id="font-size">
             </fieldset>
         </li>
         <li>
             <button aria-label="Alineació del text">{% include 'icons/text-left.svg' %}</button>
-            <fieldset class="options__submenu options__submenu--align">
+            <fieldset class="options__submenu options__submenu--align" aria-hidden="true" inert>
                 <legend class="sr-only">Alineació del text</legend>
                 <ul>
                     <li></li>
@@ -55,7 +55,7 @@
             </fieldset>
         </li>
         <li>
-            <button class="option--disabled" aria-label="Restaurar valors per defecte" aria-hidden="true">{% include 'icons/restore.svg' %}</button>
+            <button class="option--disabled" aria-label="Restaurar valors per defecte" aria-hidden="true" tabindex="-1">{% include 'icons/restore.svg' %}</button>
         </li>
     </ul>
 </div>

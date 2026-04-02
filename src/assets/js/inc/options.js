@@ -18,10 +18,14 @@ const options = () => {
 
                 optionWrappers.forEach(w => {
                     w.classList.remove("options__submenu--visible");
+                    w.setAttribute("aria-hidden", "true");
+                    w.setAttribute("inert", "");
                 });
 
                 if (wrapper && !isVisible) {
                     wrapper.classList.add("options__submenu--visible");
+                    wrapper.setAttribute("aria-hidden", "false");
+                    wrapper.removeAttribute("inert");
                 }
             });
 
@@ -36,6 +40,8 @@ const options = () => {
             const optionWrappers = document.querySelectorAll(".options__submenu");
             optionWrappers.forEach(w => {
                 w.classList.remove("options__submenu--visible");
+                w.setAttribute("aria-hidden", "true");
+                w.setAttribute("inert", "");
             });
         }
     });
