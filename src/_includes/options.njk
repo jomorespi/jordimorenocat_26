@@ -42,7 +42,8 @@
             <button aria-label="Mida de lletra">{% include 'icons/text-size.svg' %}</button>
             <fieldset class="options__submenu options__submenu--size" aria-hidden="true" inert>
                 <legend class="sr-only">Mida de la lletra</legend>
-                <input type="range" name="font-size" id="font-size">
+                <input type="range" name="font-size" id="font-size" value="16" min="12" max="24">
+                <output name="font-size-output" for="font-size"></output>
             </fieldset>
         </li>
         <li>

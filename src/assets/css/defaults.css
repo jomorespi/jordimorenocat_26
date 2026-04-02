@@ -18,6 +18,10 @@
         transition-timing-function: var(--transition-function);
     }
 
+    .main-content {
+        font-size: var(--text-base);
+    }
+
     :where(h1, .h1) {
         font-size: var(--text-2xl);
         line-height: 1.25;
@@ -94,6 +98,31 @@
             outline: 2px dashed var(--color-muted);
             outline-offset: .25rem;
         }
+    }
+    
+    input[type="range"] {
+        background-color: var(--color-primary);
+        height: .4rem;
+        border-radius: .25rem;
+        border: 1px solid var(--color-borders);
+        width: 100%;
+    }
+    
+    input[type="range"]::-moz-range-thumb {
+        -webkit-appearance: none;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 1rem;
+        background-color: var(--color-dark);
+        border: 5px solid var(--color-white);
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 1rem;
+        background-color: var(--color-dark);
+        border: 5px solid var(--color-white);
     }
 
 }

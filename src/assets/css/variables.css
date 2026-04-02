@@ -15,20 +15,18 @@
     --font-serif: Sentient, serif;
     --font-mono: "JetBrains Mono", monospace;
 
-    /* Sizes */
-    --text-2xl: 2rem;
-    --text-xl: 1.25rem;
-    --text-lg: 1.15rem;
-    --text-base: 1rem;
-    --text-sm: .875rem;
-
     /* Alignment */
     --text-align: left;
 
-    /* Transitions */
-    /* --transition-duration: .3s;
-    --transition-function: ease-in-out; */
+  }
 
+  .main-content {
+    /* Sizes */
+    --text-2xl: calc( var(--text-base) * 2);
+    --text-xl: calc( var(--text-base) * 1.25);
+    --text-lg: calc( var(--text-base) * 1.15);
+    --text-base: 1rem;
+    --text-sm: calc( var(--text-base) * .875);
   }
 
   [data-theme="dark"] {

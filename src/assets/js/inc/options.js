@@ -93,11 +93,32 @@ const options = () => {
         });
     }
 
+    // Font Size Switcher
+    const fontSizeSwitcher = () => {
+        const sizeRange = document.getElementById("font-size");
+
+        if (!sizeRange) return;
+
+        const mainContent = document.querySelector(".main-content");
+        const savedFontSize = localStorage.getItem("fontSize");
+
+        if (savedFontSize) {
+            mainContent.style.setProperty("--text-base", `${savedFontSize}px`);
+            sizeRange.value = savedFontSize;
+        }
+
+        sizeRange.addEventListener("input", function () {
+            const sizeValue = this.value;
+            mainContent.style.setProperty("--text-base", `${sizeValue}px`);
+            localStorage.setItem("fontSize", sizeValue);
+        });
+    }
+
     // Initialize Options
     submenuToggle();
     fontSwitcher();
     themeSwitcher();
-
+    fontSizeSwitcher();
 }
 
 export default options;
