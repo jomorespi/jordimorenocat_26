@@ -1,6 +1,7 @@
 const options = () => {
 
     const html = document.documentElement;
+    const mainContent = document.querySelector(".main-content");
 
     // Submenu Toggle
     const submenuToggle = () => {
@@ -45,7 +46,6 @@ const options = () => {
             });
         }
     });
-
 
     // Theme Switcher
     const themeSwitcher = () => {
@@ -99,7 +99,6 @@ const options = () => {
 
         if (!sizeRange) return;
 
-        const mainContent = document.querySelector(".main-content");
         const savedFontSize = localStorage.getItem("fontSize");
 
         if (savedFontSize) {
@@ -114,11 +113,46 @@ const options = () => {
         });
     }
 
+    // Text alignment
+    const textAlignment= () => {
+        const alignBtn = document.getElementById("textAlign");
+
+        if (!alignBtn) return;
+
+        const savedAlignment = localStorage.getItem("textAlignment");
+        const alignIcons = alignBtn.querySelectorAll("span");
+
+        if (savedAlignment) {
+            mainContent.style.setProperty("--align", savedAlignment);
+        }
+
+        alignBtn.addEventListener("click", function () {
+            const currentAlignment = mainContent.style.getPropertyValue("--align") || "left";
+            const newAlignment = currentAlignment === "left" ? "center" : currentAlignment === "center" ? "right" : "left";
+            mainContent.style.setProperty("--align", newAlignment);
+            localStorage.setItem("textAlignment", newAlignment);
+
+            alignIcons.forEach(icon => {
+                icon.classList.add("hidden");
+
+                if ( icon.classList.contains(`${newAlignment}`) ) {
+                    icon.classList.remove("hidden");
+                }
+
+            });
+
+        });
+
+
+    }
+
     // Initialize Options
     submenuToggle();
     fontSwitcher();
     themeSwitcher();
     fontSizeSwitcher();
+    textAlignment();
+
 }
 
 export default options;

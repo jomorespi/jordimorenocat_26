@@ -47,13 +47,11 @@
             </fieldset>
         </li>
         <li>
-            <button aria-label="Alineació del text">{% include 'icons/text-left.svg' %}</button>
-            <fieldset class="options__submenu options__submenu--align" aria-hidden="true" inert>
-                <legend class="sr-only">Alineació del text</legend>
-                <ul>
-                    <li></li>
-                </ul>
-            </fieldset>
+            <button id="textAlign" aria-label="Alineació del text">
+                <span aria-label="Esquerra" class="left">{% include 'icons/text-left.svg' %}</span>
+                <span aria-label="Centrat" class="center hidden">{% include 'icons/text-center.svg' %}</span>
+                <span aria-label="Dreta" class="right hidden">{% include 'icons/text-right.svg' %}</span>
+            </button>
         </li>
         <li>
             <button class="option--disabled" aria-label="Restaurar valors per defecte" aria-hidden="true" tabindex="-1">{% include 'icons/restore.svg' %}</button>
