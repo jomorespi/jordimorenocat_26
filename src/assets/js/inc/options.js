@@ -2,6 +2,8 @@ const options = () => {
 
     const html = document.documentElement;
     const mainContent = document.querySelector(".main-content");
+    const resetBtn = document.getElementById("optionsReset");
+    const optionsModified = localStorage.getItem("optionsModified") ? JSON.parse(localStorage.getItem("optionsModified")) : { theme: false, font: false, fontSize: false, textAlign: false };
 
     // Submenu Toggle
     const submenuToggle = () => {
@@ -61,6 +63,10 @@ const options = () => {
             currentTheme = html.getAttribute("data-theme") === "light" ? "dark" : "light";
             html.setAttribute("data-theme", currentTheme);
             localStorage.setItem("theme", currentTheme);
+            optionsModified.theme = true;
+            localStorage.setItem("optionsModified", JSON.stringify(optionsModified));
+            resetBtn.classList.remove("option--disabled");
+            resetBtn.removeAttribute("disabled");
         });
     }
 
@@ -89,6 +95,10 @@ const options = () => {
                 html.classList.remove("font-sans", "font-serif", "font-mono");
                 html.classList.add(`font-${selectedFont}`);
                 localStorage.setItem("selectedFont", selectedFont);
+                optionsModified.font = true;
+                localStorage.setItem("optionsModified", JSON.stringify(optionsModified));
+                resetBtn.classList.remove("option--disabled");
+                resetBtn.removeAttribute("disabled");
             });
         });
     }
@@ -110,6 +120,10 @@ const options = () => {
             const sizeValue = this.value;
             mainContent.style.setProperty("--text-base", `${sizeValue}px`);
             localStorage.setItem("fontSize", sizeValue);
+            optionsModified.fontSize = true;
+            localStorage.setItem("optionsModified", JSON.stringify(optionsModified));
+            resetBtn.classList.remove("option--disabled");
+            resetBtn.removeAttribute("disabled");
         });
     }
 
@@ -131,6 +145,10 @@ const options = () => {
             const newAlignment = currentAlignment === "left" ? "center" : currentAlignment === "center" ? "right" : "left";
             mainContent.style.setProperty("--align", newAlignment);
             localStorage.setItem("textAlignment", newAlignment);
+            optionsModified.textAlign = true;
+            localStorage.setItem("optionsModified", JSON.stringify(optionsModified));
+            resetBtn.classList.remove("option--disabled");
+            resetBtn.removeAttribute("disabled");
 
             alignIcons.forEach(icon => {
                 icon.classList.add("hidden");
@@ -143,7 +161,28 @@ const options = () => {
 
         });
 
+    }
 
+    // Options reset
+    const optionsReset = () => {
+
+        if (!resetBtn) return;
+
+        resetBtn.addEventListener("click", function () {
+            localStorage.removeItem("theme");
+            localStorage.removeItem("selectedFont");
+            localStorage.removeItem("fontSize");
+            localStorage.removeItem("textAlignment");
+            localStorage.removeItem("optionsModified");
+
+            html.removeAttribute("data-theme");
+            html.classList.remove("font-sans", "font-serif", "font-mono");
+            mainContent.style.removeProperty("--text-base");
+            mainContent.style.removeProperty("--align");
+
+            this.classList.add("option--disabled");
+            this.setAttribute("disabled", "disabled");
+        });
     }
 
     // Initialize Options
@@ -152,7 +191,7 @@ const options = () => {
     themeSwitcher();
     fontSizeSwitcher();
     textAlignment();
-
+    optionsReset();
 }
 
 export default options;
