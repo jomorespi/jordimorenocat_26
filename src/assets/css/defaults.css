@@ -56,6 +56,24 @@
         font-style: italic;
     }
 
+    a:not(.link-clean) {
+        text-decoration: underline;
+        text-decoration-color: var(--color-primary);
+        text-decoration-thickness: .25em;
+        text-underline-offset: .1em;
+        text-decoration-skip-ink: none;
+        font-weight: 600;
+
+    }
+
+    a:not(.link-clean):is(:hover, :focus-visible) {
+        text-decoration-thickness: .5em;
+    }
+
+    small {
+        font-size: .875rem;
+    }
+
     *:focus-visible {
         outline: 2px dashed var(--color-muted);
         outline-offset: .5rem;

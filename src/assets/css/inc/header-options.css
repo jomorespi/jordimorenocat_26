@@ -67,7 +67,6 @@
 
                             label {
                                 small {
-                                    font-size: var(--text-sm);
                                     color: var(--color-muted);
                                     display: block;
                                 }

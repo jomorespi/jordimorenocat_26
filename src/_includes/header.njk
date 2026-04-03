@@ -5,7 +5,7 @@
                 {%- for item in collections.all | eleventyNavigation() -%}
                     {% set active = (page.url == item.url) or (item.url != '/' and page.url.indexOf(item.url) == 0) %}
                     <li class="{% if active %}is-active{% endif %}">
-                    <a href="{{ item.url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a>
+                    <a class="link-clean" href="{{ item.url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a>
                     </li>
                 {%- endfor -%}
             </ul>
