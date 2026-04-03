@@ -102,17 +102,26 @@ const options = () => {
 
         if (!sizeRange) return;
 
+        const sizeOutput = document.getElementById("font-size__output");
         const savedFontSize = localStorage.getItem("fontSize");
 
         if (savedFontSize) {
-            mainContent.style.setProperty("--text-base", `${savedFontSize}px`);
+            mainContent.style.setProperty("--text-base", `${savedFontSize/100}rem`);
             sizeRange.value = savedFontSize;
+            if (sizeOutput) {
+                sizeOutput.textContent = `${savedFontSize/100}rem`;
+            }
         }
 
         sizeRange.addEventListener("input", function () {
             const sizeValue = this.value;
-            mainContent.style.setProperty("--text-base", `${sizeValue}px`);
+            mainContent.style.setProperty("--text-base", `${sizeValue/100}rem`);
             localStorage.setItem("fontSize", sizeValue);
+
+            if (sizeOutput) {
+                sizeOutput.textContent = `${sizeValue}%`;
+            }
+
             enableReset("fontSize");
         });
     }
@@ -198,8 +207,12 @@ const options = () => {
             }
 
             const sizeRange = document.getElementById("font-size");
+            const sizeOutput = document.getElementById("font-size__output");
             if (sizeRange) {
-                sizeRange.value = 16;
+                sizeRange.value = 100;
+            }
+            if (sizeOutput) {
+                sizeOutput.textContent = `100%`;
             }
 
             const alignBtn = document.getElementById("textAlign");

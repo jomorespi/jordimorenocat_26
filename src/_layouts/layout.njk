@@ -8,9 +8,10 @@
 </head>
 <body class="page-{{ page.fileSlug if page.fileSlug else 'index' }}">
 
+    <a href="#main-content" class="sr-only--focusable">Saltar al contingut principal</a>
     {% include 'header.njk' %}
 
-    <main class="container main-content">
+    <main id="main-content" class="container main-content">
     
         {{ content | safe }}
     

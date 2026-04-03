@@ -59,6 +59,9 @@
         font-size: var(--text-2xl);
     }
 
+    .text-center {
+        text-align: center;
+    }
 
     .font-bold {
         font-weight: 700;
@@ -78,6 +81,10 @@
 
     .font-mono {
         font-family: var(--font-mono);
+    }
+
+    .block {
+        display: block;
     }
 
     .hidden {

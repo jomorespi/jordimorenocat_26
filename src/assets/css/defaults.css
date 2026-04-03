@@ -61,7 +61,7 @@
         outline-offset: .5rem;
     }
 
-    .sr-only {
+    :is(.sr-only, .sr-only--focusable) {
         position: absolute;
         width: 1px;
         height: 1px;
@@ -71,6 +71,17 @@
         clip: rect(0, 0, 0, 0);
         white-space: nowrap;
         border-width: 0;
+    }
+
+    .sr-only--focusable:focus-visible {
+        position: fixed;
+        width: auto;
+        height: auto;
+        padding: .5rem;
+        background-color: var(--color-white);
+        margin: .5rem;
+        clip: initial;
+        border: 1px solid var(--color-primary);
     }
 
     input[type="radio"] {
@@ -107,6 +118,7 @@
         border-radius: .25rem;
         border: 1px solid var(--color-borders);
         width: 100%;
+        margin-block: 1rem;
     }
     
     input[type="range"]::-moz-range-thumb {
