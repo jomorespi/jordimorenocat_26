@@ -3,7 +3,6 @@ const options = () => {
     const html = document.documentElement;
     const mainContent = document.querySelector(".main-content");
     const resetBtn = document.getElementById("optionsReset");
-    const optionsModified = localStorage.getItem("optionsModified") ? JSON.parse(localStorage.getItem("optionsModified")) : { theme: false, font: false, fontSize: false, textAlign: false };
 
     // Submenu Toggle
     const submenuToggle = () => {
@@ -63,10 +62,7 @@ const options = () => {
             currentTheme = html.getAttribute("data-theme") === "light" ? "dark" : "light";
             html.setAttribute("data-theme", currentTheme);
             localStorage.setItem("theme", currentTheme);
-            optionsModified.theme = true;
-            localStorage.setItem("optionsModified", JSON.stringify(optionsModified));
-            resetBtn.classList.remove("option--disabled");
-            resetBtn.removeAttribute("disabled");
+            enableReset("theme");
         });
     }
 
@@ -95,10 +91,7 @@ const options = () => {
                 html.classList.remove("font-sans", "font-serif", "font-mono");
                 html.classList.add(`font-${selectedFont}`);
                 localStorage.setItem("selectedFont", selectedFont);
-                optionsModified.font = true;
-                localStorage.setItem("optionsModified", JSON.stringify(optionsModified));
-                resetBtn.classList.remove("option--disabled");
-                resetBtn.removeAttribute("disabled");
+                enableReset("font");
             });
         });
     }
@@ -120,10 +113,7 @@ const options = () => {
             const sizeValue = this.value;
             mainContent.style.setProperty("--text-base", `${sizeValue}px`);
             localStorage.setItem("fontSize", sizeValue);
-            optionsModified.fontSize = true;
-            localStorage.setItem("optionsModified", JSON.stringify(optionsModified));
-            resetBtn.classList.remove("option--disabled");
-            resetBtn.removeAttribute("disabled");
+            enableReset("fontSize");
         });
     }
 
@@ -145,10 +135,7 @@ const options = () => {
             const newAlignment = currentAlignment === "left" ? "center" : currentAlignment === "center" ? "right" : "left";
             mainContent.style.setProperty("--align", newAlignment);
             localStorage.setItem("textAlignment", newAlignment);
-            optionsModified.textAlign = true;
-            localStorage.setItem("optionsModified", JSON.stringify(optionsModified));
-            resetBtn.classList.remove("option--disabled");
-            resetBtn.removeAttribute("disabled");
+            enableReset("textAlign");
 
             alignIcons.forEach(icon => {
                 icon.classList.add("hidden");
@@ -163,25 +150,70 @@ const options = () => {
 
     }
 
+    // Enable reset button
+    const enableReset = (opt) => {
+
+        if (!resetBtn) return;
+
+        let updatedOptionsModified = localStorage.getItem("optionsModified")
+            ? JSON.parse(localStorage.getItem("optionsModified"))
+            : { theme: false, font: false, fontSize: false, textAlign: false };
+
+        updatedOptionsModified[opt] = true;
+        localStorage.setItem("optionsModified", JSON.stringify(updatedOptionsModified));
+        resetBtn.removeAttribute("disabled");
+        
+    }
+
     // Options reset
     const optionsReset = () => {
 
         if (!resetBtn) return;
 
         resetBtn.addEventListener("click", function () {
-            localStorage.removeItem("theme");
-            localStorage.removeItem("selectedFont");
-            localStorage.removeItem("fontSize");
-            localStorage.removeItem("textAlignment");
-            localStorage.removeItem("optionsModified");
+            ["theme", "selectedFont", "fontSize", "textAlignment", "optionsModified"].forEach(key => {
+                localStorage.removeItem(key);
+            });
 
             html.removeAttribute("data-theme");
             html.classList.remove("font-sans", "font-serif", "font-mono");
             mainContent.style.removeProperty("--text-base");
             mainContent.style.removeProperty("--align");
 
-            this.classList.add("option--disabled");
             this.setAttribute("disabled", "disabled");
+
+            let currentTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            html.setAttribute("data-theme", currentTheme);
+
+            const fontSwitchMenu = document.querySelector('.options__submenu--font');
+            if (fontSwitchMenu) {
+                const fontOptions = fontSwitchMenu.querySelectorAll("input[type='radio']");
+                fontOptions.forEach(option => {
+                    if (option.value === "sans") {
+                        option.checked = true;
+                    } else {
+                        option.checked = false;
+                    }
+                });
+            }
+
+            const sizeRange = document.getElementById("font-size");
+            if (sizeRange) {
+                sizeRange.value = 16;
+            }
+
+            const alignBtn = document.getElementById("textAlign");
+            if (alignBtn) {
+            const alignIcons = alignBtn.querySelectorAll("span");
+            alignIcons.forEach(icon => {
+                icon.classList.add("hidden");
+                if (icon.classList.contains("left")) {
+                    icon.classList.remove("hidden");
+                }
+            });
+            }
+
+
         });
     }
 
