@@ -171,7 +171,20 @@ const options = () => {
         updatedOptionsModified[opt] = true;
         localStorage.setItem("optionsModified", JSON.stringify(updatedOptionsModified));
         resetBtn.removeAttribute("disabled");
-        
+    }
+    
+
+    // Enable reset button if any option is modified
+    const checkModifiedOptions = () => {
+        const optionsModified = localStorage.getItem("optionsModified")
+            ? JSON.parse(localStorage.getItem("optionsModified"))
+            : { theme: false, font: false, fontSize: false, textAlign: false };
+
+        if (Object.values(optionsModified).some(modified => modified)) {
+            resetBtn.removeAttribute("disabled");
+        } else {
+            resetBtn.setAttribute("disabled", "disabled");
+        }
     }
 
     // Options reset
@@ -237,6 +250,7 @@ const options = () => {
     fontSizeSwitcher();
     textAlignment();
     optionsReset();
+    checkModifiedOptions();
 }
 
 export default options;

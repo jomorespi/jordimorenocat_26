@@ -9,17 +9,16 @@
         }
 
         li {
-            padding-left: 1.25rem;
+            padding-left: 1.25em;
             position: relative;
 
             &::before {
                 content: "";
                 display: inline-block;
-                width: .8rem;
-                height: .75rem;
+                width: .8em;
+                height: .75em;
                 background-color: var(--color-primary);
-                margin-right: .5rem;
-                border-radius: .125rem .125rem .125rem .375rem;
+                border-radius: .125em .125em .125em .375em;
                 position: absolute;
                 left: 0;
                 top: .4em;

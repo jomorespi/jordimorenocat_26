@@ -15,9 +15,9 @@
     }
 
     .profile-img {
-        width: 75px;
-        height: 75px;
-        border-radius: .5rem .5rem .5rem 2rem;
+        width: 4.6875em;
+        height: 4.6875em;
+        border-radius: .5em .5em .5em 2em;
     }
 
     body.page-index {
@@ -27,7 +27,7 @@
             flex-wrap: wrap;
             flex-direction: row;
             align-content: center;
-            gap: 1rem 1.5rem;
+            gap: 1em 1.5em;
         }
     }
     
