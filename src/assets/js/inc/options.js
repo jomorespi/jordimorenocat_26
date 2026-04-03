@@ -137,6 +137,12 @@ const options = () => {
 
         if (savedAlignment) {
             mainContent.style.setProperty("--align", savedAlignment);
+            alignIcons.forEach(icon => {
+                icon.classList.add("hidden");
+                if ( icon.classList.contains(`${savedAlignment}`) ) {
+                    icon.classList.remove("hidden");
+                }
+            });
         }
 
         alignBtn.addEventListener("click", function () {

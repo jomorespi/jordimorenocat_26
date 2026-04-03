@@ -5,11 +5,11 @@
         &::before {
             content: "";
             display: inline-block;
-            width: .8rem;
-            height: .75rem;
+            width: .8em;
+            height: .75em;
             background-color: var(--color-primary);
-            margin-right: .5rem;
-            border-radius: .125rem .125rem .125rem .375rem;
+            margin-right: .5em;
+            border-radius: .125em .125em .125em .375em;
         }
 
     }
