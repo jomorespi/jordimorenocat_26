@@ -109,7 +109,7 @@ const options = () => {
             mainContent.style.setProperty("--text-base", `${savedFontSize/100}rem`);
             sizeRange.value = savedFontSize;
             if (sizeOutput) {
-                sizeOutput.textContent = `${savedFontSize/100}rem`;
+                sizeOutput.textContent = `${savedFontSize}%`;
             }
         }
 
@@ -136,7 +136,7 @@ const options = () => {
         const alignIcons = alignBtn.querySelectorAll("span");
 
         if (savedAlignment) {
-            mainContent.style.setProperty("--align", savedAlignment);
+            mainContent.classList.add(`text-${savedAlignment}`);
             alignIcons.forEach(icon => {
                 icon.classList.add("hidden");
                 if ( icon.classList.contains(`${savedAlignment}`) ) {
@@ -146,9 +146,10 @@ const options = () => {
         }
 
         alignBtn.addEventListener("click", function () {
-            const currentAlignment = mainContent.style.getPropertyValue("--align") || "left";
+            const currentAlignment = mainContent.classList.contains("text-left") ? "left" : mainContent.classList.contains("text-center") ? "center" : mainContent.classList.contains("text-right") ? "right" : "left";
             const newAlignment = currentAlignment === "left" ? "center" : currentAlignment === "center" ? "right" : "left";
-            mainContent.style.setProperty("--align", newAlignment);
+            mainContent.classList.remove("text-left", "text-center", "text-right");
+            mainContent.classList.add(`text-${newAlignment}`);
             localStorage.setItem("textAlignment", newAlignment);
             enableReset("textAlign");
 
@@ -206,7 +207,7 @@ const options = () => {
             html.removeAttribute("data-theme");
             html.classList.remove("font-sans", "font-serif", "font-mono");
             mainContent.style.removeProperty("--text-base");
-            mainContent.style.removeProperty("--align");
+            mainContent.classList.remove("text-left", "text-center", "text-right");
 
             this.setAttribute("disabled", "disabled");
 

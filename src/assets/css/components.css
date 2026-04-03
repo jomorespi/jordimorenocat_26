@@ -28,6 +28,14 @@
             flex-direction: row;
             align-content: center;
             gap: 1em 1.5em;
+
+            &.text-center {
+                justify-content: center;
+            }
+
+            &.text-right {
+                justify-content: flex-end;
+            }
         }
     }
     
