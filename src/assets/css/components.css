@@ -27,11 +27,11 @@
 
     .main-content {
         margin-bottom: 5rem;
+        min-height: calc(100vh - 11rem);
     }
 
     body.page-index {
         .main-content {
-            min-height: calc(100vh - 11rem);
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
@@ -88,10 +88,8 @@
 
     @media (min-width: 768px) {
 
-        body.page-index {
-            .main-content {
-                min-height: calc(60svh - 3rem);
-            }
+        .main-content {
+            min-height: calc(60svh - 3rem);
         }
 
         .main-footer {
