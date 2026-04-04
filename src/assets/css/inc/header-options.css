@@ -126,7 +126,7 @@
                         transform-origin: top;
                         transform: translateY(-100%);
 
-                        :is(ul, li) {
+                        :is(ul, li, .options__submenu__wrapper) {
                             margin: .5rem 0 0;
                         }
                     }
